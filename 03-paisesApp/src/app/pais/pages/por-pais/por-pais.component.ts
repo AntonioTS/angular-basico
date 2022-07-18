@@ -8,7 +8,6 @@ import { PaisService } from '../../services/pais.service';
 })
 export class PorPaisComponent {
 
-
   termino: string = '';
   hayError: boolean = false;
   paises: Country[] = [];
@@ -29,5 +28,10 @@ export class PorPaisComponent {
         this.hayError = true;
         this.paises = [];
       });
+  }
+
+  sugerencias(termino: string){
+    this.hayError = false;
+    // Crear sugerencias
   }
 }

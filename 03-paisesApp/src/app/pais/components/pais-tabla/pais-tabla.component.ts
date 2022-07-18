@@ -10,6 +10,7 @@ export class PaisTablaComponent {
 
 
   @Input() paises: Country[] = [];
+  @Input() capital: Country[] = [];
 
   constructor() { }
 
