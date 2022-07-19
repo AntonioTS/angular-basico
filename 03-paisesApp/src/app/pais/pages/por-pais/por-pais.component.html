@@ -5,6 +5,15 @@
         <app-pais-input (onEnter)="buscar($event)" (onDebounce)="sugerencias($event)" placeholder="Buscar país..."></app-pais-input>
     </div>
 </div>
+<ul *ngIf="mostrarSugeridos" class="list-group">
+    <li *ngFor="let pais of paisSugerido"
+    class="list-group-item list-group-item-action">
+        <a [routerLink]="['/pais', pais.alpha2Code]" class="nav-link">{{ pais.name }}</a>
+    </li>
+    <li class="list-group-item list-group-item-action" (click)="buscar( termino )">
+        <a class="nav-link">Buscar "{{ termino }}"</a>
+    </li>
+</ul>
 <hr>
 <div *ngIf="hayError" class="alert alert-danger">
     No se encontro nada con el termino {{ termino }}
