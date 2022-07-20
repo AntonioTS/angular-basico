@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-no-comunes',
   templateUrl: './no-comunes.component.html',
   styleUrls: ['./no-comunes.component.css']
 })
-export class NoComunesComponent implements OnInit {
+export class NoComunesComponent implements OnInit{
 
-  constructor() { }
+  nombre: string = 'Antonio';
+  genero: string = 'masculino';
 
-  ngOnInit(): void {
+  invitacionMap = {
+    'masculino': 'invitarlo',
+    'femenino': 'invitarla'
+  }
+
+  constructor(private primengConfig: PrimeNGConfig) {  }
+
+  ngOnInit() {
+    this.primengConfig.ripple = true;
   }
 
 }

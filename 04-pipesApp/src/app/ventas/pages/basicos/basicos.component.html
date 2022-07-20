@@ -42,6 +42,12 @@
                 <li> Fecha | date:'short' </li>
                 <li> Custom date Fecha | date:'EEEE - dd, LLLL - MM : YYYY' </li>
             </ul>
+            <hr>
+            <ul>
+                <li>fecha | date:'long':'GMT-6'</li>
+                <li>fecha | date:'long':'GMT-4'</li>
+                <li>fecha | date:'long':'':'fr'</li>
+            </ul>
         </p-card>
     </div>
     <div class="col-6">
@@ -51,6 +57,12 @@
                 <li>{{ fecha | date}}</li>
                 <li>{{ fecha | date:'short'}}</li>
                 <li>{{ fecha | date:'EEEE - dd, LLLL - MM : YYYY'}}</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>{{ fecha | date:'long':'GMT-6'}}</li>
+                <li>{{ fecha | date:'long':'GMT-4'}}</li>
+                <li>{{ fecha | date:'long':'':'fr'}}</li>
             </ul>
         </p-card>
     </div>
