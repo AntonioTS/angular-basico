@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { ToolbarModule } from 'primeng/toolbar';
+import { TableModule } from 'primeng/table';
 import { MenubarModule } from 'primeng/menubar';
 import { FieldsetModule } from 'primeng/fieldset';
 
@@ -10,6 +12,8 @@ import { FieldsetModule } from 'primeng/fieldset';
   exports: [
     ButtonModule,
     CardModule,
+    ToolbarModule,
+    TableModule,
     MenubarModule,
     FieldsetModule  
   ]
