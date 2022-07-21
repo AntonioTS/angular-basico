@@ -11,20 +11,20 @@
     
     <div class="p-toolbar-group-right">
         <button pButton label="Toggle mayusculas" class="p-button-raised p-button-warning mr-1" (click)="cambiarMayus()"></button>
-        <button pButton label="Por nombre" icon="pi pi-sort" class="mr-1"></button>
-        <button pButton label="Valores" icon="pi pi-sort" class="mr-1 p-button-success"></button>
-        <button pButton label="Valores" icon="pi pi-sort" class="mr-1 p-button-success"></button>
+        <button pButton label="Por nombre" icon="pi pi-sort" class="mr-1" (click)="cambiarOrden('nombre')"></button>
+        <button pButton label="Vuela" icon="pi pi-sort" class="mr-1 p-button-success" (click)="cambiarOrden('vuela')"></button>
+        <button pButton label="Color" icon="pi pi-sort" class="mr-1 p-button-help" (click)="cambiarOrden('color')"></button>
     </div>
 </p-toolbar>
 
 <div class="grid">
     <div class="col mt-2">
-        <p-table [value]="heroes">
+        <p-table [value]="heroes | ordenar:ordenarPor">
             <ng-template pTemplate="header">
                 <tr>
-                    <th>Nombre</th>
-                    <th>Vuela</th>
-                    <th>Color principal</th>
+                    <th pSortableColumn="nombre">Nombre <p-sortIcon field="nombre"></p-sortIcon></th>
+                    <th pSortableColumn="vuela">Vuela <p-sortIcon field="vuela"></p-sortIcon></th>
+                    <th pSortableColumn="color">Color <p-sortIcon field="color"></p-sortIcon></th>
                 </tr>
             </ng-template>
             <ng-template pTemplate="body" let-heroes>
