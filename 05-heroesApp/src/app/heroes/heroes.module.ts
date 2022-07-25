@@ -11,6 +11,7 @@ import { HeroesRoutingModule } from './heroes-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { HeroesTarjetaComponent } from './components/heroes-tarjeta/heroes-tarjeta.component';
 import { ImagenHeroePipe } from './pipes/imagen-heroe.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -28,6 +29,7 @@ import { ImagenHeroePipe } from './pipes/imagen-heroe.pipe';
   imports: [
     CommonModule,
     FlexLayoutModule,
+    FormsModule,
     MaterialModule,
     HeroesRoutingModule
   ]
